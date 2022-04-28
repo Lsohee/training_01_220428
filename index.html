@@ -26,7 +26,29 @@ const one = document.querySelector("#container>div:nth-child(1)");
 console.log(one);
 
 let sizeValue = "500px";
-let value = 1
+const two = document.querySelector("#container>div:nth-child(2)");
+
+let oneValue = 1;
+let twoValue = 2;
+
+one.addEventListener("click", function(){
+  if(oneValue < twoValue){
+two.style.zIndex = oneValue;
+one.style.zIndex = twoValue;
+  } 
+});
+
+two.addEventListener("click", function(){
+  if (two.style.zIndex < one.style.zIndex){
+    two.style.zIndex = twoValue;
+    one.style.zIndex = oneValue;
+
+  }
+// console.log(1);
+});
+
+
+
 
 one.style.backgroundColor = "darkblue";
 one.style.width = sizeValue;
@@ -34,10 +56,9 @@ one.style.height = sizeValue;
 one.style.position = "relative"
 one.style.left = "60px"
 one.style.top = "80px"
-one.style.zInex = value;
+one.style.zIndex = oneValue;
+console.dir(one);
 
-
-const two = document.querySelector("#container>div:nth-child(2)");
 console.log(two);
 two.style.backgroundColor = "darkred";
 two.style.width = sizeValue;
@@ -45,12 +66,10 @@ two.style.height = sizeValue;
 two.style.position = "relative"
 two.style.left = "240px"
 two.style.top = "-170px"
-two.style.zInex = value + 1;
+two.style.zIndex = twoValue;
 
 
+</script>
 
-    
-  </script>
-  
 </body>
 </html>
