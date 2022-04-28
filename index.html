@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="container">
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+const container = document.getElementById("container");
+console.log(container);
+container.style.border = "1px solid black";
+container.style.width = 900 + "px";
+container.style.height = 900 + "px";
+
+/*---------------------------------------------------------*/
+
+const one = document.querySelector("#container>div:nth-child(1)");
+console.log(one);
+
+let sizeValue = "500px";
+let value = 1
+
+one.style.backgroundColor = "darkblue";
+one.style.width = sizeValue;
+one.style.height = sizeValue;
+one.style.position = "relative"
+one.style.left = "60px"
+one.style.top = "80px"
+one.style.zInex = value;
+
+
+const two = document.querySelector("#container>div:nth-child(2)");
+console.log(two);
+two.style.backgroundColor = "darkred";
+two.style.width = sizeValue;
+two.style.height = sizeValue;
+two.style.position = "relative"
+two.style.left = "240px"
+two.style.top = "-170px"
+two.style.zInex = value + 1;
+
+
+
+    
+  </script>
+  
+</body>
+</html>
